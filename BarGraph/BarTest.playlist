@@ -1,0 +1,1 @@
+<Playlist Version="1.0"><Add Test="BarGraph.WebAPI.Tests.Controllers.BarControllerTest.TestGetRandomizedBars" /><Add Test="BarGraph.WebAPI.Tests.Controllers.BarControllerTest.TestGetRandomizedBarsValues" /><Add Test="BarGraph.WebAPI.Tests.Controllers.BarControllerTest.TestUploadBars" /><Add Test="BarGraph.WebAPI.Tests.Controllers.BarControllerTest.TestGetBars" /></Playlist>

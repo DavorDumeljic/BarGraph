@@ -1,0 +1,72 @@
+﻿@{
+    ViewBag.Title = "Bars";
+
+    var uploadDataUrl = Url.Action($"UploadData", $"Bar");
+    var getDataUrl = Url.Action($"GetBars", $"Bar");
+
+    var errorMessage = ViewBag.ErrorMessage ?? "";
+    var successMessage = ViewBag.SuccessMessage ?? "";
+}
+
+@section style {
+    <link href="~/Content/Resources/Home.css" rel="stylesheet" />
+}
+
+<input type="hidden" id="getDataUrl" name="getDataUrl" value="@getDataUrl" />
+
+<section id="uploadSection">
+
+    <h2>Upload file</h2>
+
+    <span class="text-danger">
+        @errorMessage
+    </span>
+    <span class="text-success">
+        @successMessage
+    </span>
+
+    <form action="@uploadDataUrl" method="post" enctype="multipart/form-data" id="uploadDataForm">
+        @Html.AntiForgeryToken()
+        <div class="col-md-12 space">
+            <input name="file" type="file" class="file-upload-box" />
+        </div>
+        <div class="col-md-12 space">
+            <input type="submit" class="button" name="Upload" value="Upload" />
+        </div>
+    </form>
+
+</section>
+
+<section id="chartsSection">
+
+    <h2>Results</h2>
+    <input type="button" class="button" name="Chart" id="btnChart" value="Chart" />
+    <input type="button" class="button" name="Table" id="btnTable" value="Table" />
+    <input type="button" class="button" name="Refresh" id="btnRefresh" value="Refresh" />
+
+    <div id="table" class="table">
+        <div class="col-md-12 table-header-group">
+            <div class="col-md-4 table-cell">
+                <p>Name</p>
+            </div>
+            <div class="col-md-4 table-cell">
+                <p>Color</p>
+            </div>
+            <div class="col-md-4 table-cell">
+                <p>Size</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="chart">
+        <div id="chartContainer" style="height: 360px; width: 100%;"></div>
+    </div>
+
+</section>
+
+
+
+@section scripts {
+    <script src="~/Scripts/vendor/canvasjs.js"></script>
+    <script src="~/Scripts/resources/Home.js"></script>
+}

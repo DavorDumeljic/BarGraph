@@ -1,0 +1,65 @@
+﻿
+
+/*File upload*/
+
+#uploadSection {
+    background-color: #0e1e5c;
+    color: white;
+    text-align: center;
+}
+
+.file-upload-box {
+    border: 1px solid #0e1e5c;
+    min-width: 400px;
+    min-height: 28px;
+    background: white;
+    cursor: pointer;
+    color: #0e1e5c;
+}
+
+/*Charts section*/
+#chartsSection {
+    background-color: #ddd;
+    text-align: center;
+    color: #0e1e5c;
+    min-height: 500px;
+}
+
+#table, #chart {
+    width: 80%;
+    margin: 80px auto 0;
+    background-color: white;
+    position: relative;
+}
+
+.table {
+    display: table;
+    border-collapse: collapse;
+}
+
+.table-header-group {
+    display: table-header-group;
+    background-color: #0e1e5c;
+    color: white;
+}
+
+    .table-header-group p {
+        margin: 10px 0 10px 0;
+        font-size: 1.1em;
+    }
+
+.table-row {
+    display: table-row;
+    border-bottom: 1px solid #c3c3c3;
+}
+
+.table-cell {
+    display: table-cell;
+    padding: 5px;
+}
+
+.canvasjs-chart-canvas {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
